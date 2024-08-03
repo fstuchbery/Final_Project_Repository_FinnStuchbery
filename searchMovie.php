@@ -1,0 +1,38 @@
+<?php
+
+/*******w******** 
+    
+    Name:
+    Date:
+    Description:
+
+****************/
+
+require('connect.php');
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>BetterLoxd</title>
+</head>
+<body id = "indexBody">
+    <!-- Remember that alternative syntax is good and html inside php is bad -->
+     
+    <h1 id = "titleCard"><a href = "index.php" id = "homeLink"> BetterLoxd </a> </h1>
+        <div id = "linksWrapper">
+        <a href = "post.php" id = "newPostAnchor"><h3>Create Post</h3></a> 
+        <a href = "categories.php" id = "catsAnchor"><h3> Edit Categories</h3> </a> 
+        <a href = "currentCategories.php" id = "catsAnchor"><h3>View Categories </h3></a> 
+        </div>
+
+        <div id = "movieResultWrapper">
+            <script src = "scripts.js"> </script>
+        </div>
+</body>
+</html>
