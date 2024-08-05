@@ -29,9 +29,10 @@ $statement->execute();
      
     <h1 id = "titleCard"><a href = "index.php" id = "homeLink"> BetterLoxd </a> </h1>
         <div id = "linksWrapper">
-        <a href = "post.php" id = "newPostAnchor"><h3>Create Post</h3></a> 
+        <a href = "post.php" id = "catsAnchor"><h3>Create Post</h3></a> 
         <a href = "categories.php" id = "catsAnchor"><h3> Edit Categories</h3> </a> 
-        <a href = "currentCategories.php" id = "catsAnchor"><h3>View Categories </h3></a> 
+        <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
+        <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
         </div>
 
         <div id = "listOfReviews">

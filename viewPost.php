@@ -40,7 +40,12 @@ $quote = $statement->fetch();
     <!-- Remember that alternative syntax is good and html inside php is bad -->
      
         <h1 id = "newTitleCard"><a href = "index.php" id = "homeLink"> BetterLoxd </a> </h1>
-    
+        <div id = "linksWrapper">
+        <a href = "post.php" id = "catsAnchor"><h3>Create Post</h3></a> 
+        <a href = "categories.php" id = "catsAnchor"><h3> Edit Categories</h3> </a> 
+        <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
+        <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
+        </div>
         
     <h1>  <?=$quote['reviewTitle'] ?> </h1>
     <h3> Date Watched: <?= $quote['reviewDate'] ?></h3>
