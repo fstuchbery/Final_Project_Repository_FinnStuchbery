@@ -32,13 +32,13 @@ $allReviews = $statemennt->fetchAll(PDO::FETCH_ASSOC);
      
         <h1 id = "titleCard"><a href = "index.php" id = "homeLink"> BetterLoxd </a> </h1>
         <div id = "linksWrapper">
-        <a href = "post.php" id = "catsAnchor"><h3>Create Post</h3></a> 
+        <a href = "post.php" id = "catsAnchor"><h3>Create Review</h3></a> 
         <a href = "categories.php" id = "catsAnchor"><h3> Edit Categories</h3> </a> 
         <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
         <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
         </div>
             
-            <ul> 
+            <ul id = "currentCatList"> 
                     <?php foreach($allCats as $categoriesIndex):   ?> 
                     <h2>  <?php echo $categoriesIndex['categorieName']  ?>  </h2>   
                     <?php foreach($allReviews as $reviewIndex):   ?>
@@ -46,7 +46,7 @@ $allReviews = $statemennt->fetchAll(PDO::FETCH_ASSOC);
                     <li> 
                            
                             
-                            <a href = "edit.php?reviewID=<?= $reviewIndex['reviewID']?>">edit  </a>
+                            <a  class = "currentCatListLinks"  href = "edit.php?reviewID=<?= $reviewIndex['reviewID']?>">edit  </a>
                     </li>
                     <?php  } ?> 
                     <?php endforeach  ?>

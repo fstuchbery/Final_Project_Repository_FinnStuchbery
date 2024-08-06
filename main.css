@@ -69,16 +69,35 @@ label {
     resize: none;
 }
 
-#postBody, #editBody {
+ #editBody {
     height: 1600px;
-    margin-left:25%;
+    
     background-color: rgb(49, 62, 88);
 }
 
+#postBody {
+    height: 1600px;
+    background-color: rgb(49, 62, 88);
+}
+
+#newTitleCard, #currentCatList {
+    margin-left: 25%;
+}
+
+#currentCatList {
+    padding: 2px 15px;
+    border:3px solid #7c7c7c;
+    border-radius: 5px;
+    width:25%;
+}
 
 
+#currentCatListLinks {
+text-decoration: none;    
+}
 #postForm, #editForm {
     align-content: end;
+    margin-left: 25%;
     padding: 5px 5px;
     border:4px solid #7c7c7c;
     border-radius: 5px;
