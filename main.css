@@ -25,13 +25,17 @@
 #homeLink:visited {
     color: #000;
 }
+
+#homeLink:hover {
+    color: #7c7c7c;
+}
 .links {
     list-style-type: none;
     padding: 5px 5px;
     border:4px solid #7c7c7c;
     border-radius: 5px;
     margin: 5px 5px;
-    width: 50%;
+    width: 40%;
 }
 
 #viewPostWrapper {
@@ -44,6 +48,10 @@
 
 .linkAnchorTags:visited {
     color:#000;
+}
+
+.linkAnchorTags:hover{
+    color: #7c7c7c;
 }
 
 .linkAnchorTags {
@@ -59,6 +67,10 @@ color:#594885
 
 #catsAnchor:visited {
     color:#000;
+}
+
+#catsAnchor:hover {
+    color: #7c7c7c;
 }
 
 #catsAnchor {
