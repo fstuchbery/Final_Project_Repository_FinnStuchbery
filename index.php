@@ -41,7 +41,7 @@ $statement->execute();
             <?php while($row = $statement->fetch()): ?>
                 <li class = "links"> <h1><a href = "viewPost.php?reviewID=<?= $row['reviewID']?>" class = "linkAnchorTags"><?php echo $row['movieTitle'] ?></a> </h1>
                 <input type = "hidden" name = "indexID" value = "<?= $row['reviewID']?>">
-                <?php echo $row['reviewTitle'] ?> by <?php echo $row['author'] ?> 
+                <?php echo $row['reviewTitle'] ?> <br> by <?php echo $row['author'] ?> 
             
                  <a href = "edit.php?reviewID=<?= $row['reviewID']?>" class = "editTagss">-edit </a> 
             </li>
