@@ -129,8 +129,8 @@ label {
 }
 
 
-#currentCatListLinks {
-text-decoration: none;    
+.currentCatListLinks {
+list-style-type: none;    
 }
 #postForm, #editForm {
     align-content: end;
@@ -139,6 +139,10 @@ text-decoration: none;
     border:4px solid #7c7c7c;
     border-radius: 5px;
     width: 25%;
+}
+
+.currentCatListLinks:visited{
+color: #000;
 }
 
  #newCatForm {

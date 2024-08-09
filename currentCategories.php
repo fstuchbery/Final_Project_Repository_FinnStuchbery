@@ -48,7 +48,7 @@ $allReviews = $statemennt->fetchAll(PDO::FETCH_ASSOC);
                     <li> 
                            
                             
-                            <a  class = "currentCatListLinks"  href = "edit.php?reviewID=<?= $reviewIndex['reviewID']?>">edit  </a>
+                            <a  class = "currentCatListLinks"  href = "viewPost.php?reviewID=<?= $reviewIndex['reviewID']?>"> <?= $reviewIndex['reviewTitle'] ?> </a>
                     </li>
                     <?php  } ?> 
                     <?php endforeach  ?>
