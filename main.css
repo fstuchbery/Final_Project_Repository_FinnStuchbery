@@ -59,6 +59,7 @@
 }
 
 .editTagss {
+    text-decoration: none;
     margin-top: 0px;
 }
 .editTagss:visited{
@@ -74,7 +75,7 @@ color:#594885
 }
 
 #catsAnchor {
-    
+    text-decoration: none;
     padding: 1px 9px;
     margin: 5px 0px;
     border:3px solid #7c7c7c;
@@ -83,6 +84,10 @@ color:#594885
  #titleCard {
     margin-left: 25%;
     
+}
+
+.listLinksCats{
+    list-style-type: none;
 }
 
 
@@ -130,7 +135,7 @@ label {
 
 
 .currentCatListLinks {
-list-style-type: none;    
+text-decoration: none;
 }
 #postForm, #editForm {
     align-content: end;

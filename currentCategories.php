@@ -45,7 +45,7 @@ $allReviews = $statemennt->fetchAll(PDO::FETCH_ASSOC);
                     <h2>  <?php echo $categoriesIndex['categorieName']  ?>  </h2>   
                     <?php foreach($allReviews as $reviewIndex):   ?>
                         <?php if($reviewIndex['categorieID'] === $categoriesIndex['id']) { ?>
-                    <li> 
+                    <li class = "listLinksCats"> 
                            
                             
                             <a  class = "currentCatListLinks"  href = "viewPost.php?reviewID=<?= $reviewIndex['reviewID']?>"> <?= $reviewIndex['reviewTitle'] ?> </a>
