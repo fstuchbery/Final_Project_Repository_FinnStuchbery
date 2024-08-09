@@ -76,7 +76,7 @@ $quote = $statement->fetch();
 <body id = "editBody">
     <!-- Remember that alternative syntax is good and html inside php is bad -->
      <?php if($id): ?>
-        <h1 id = "newTitleCard"><a href = "index.php" id = "homeLink">Home </a> </h1>
+        <h1 id = "titleCard"><a href = "index.php" id = "homeLink">Home </a> </h1>
     <form method = "post" action = "edit.php?reviewID=<?= $quote['reviewID']?>" id = "editForm"> 
         <input type = "hidden" name = "reviewID" value = "<?= $quote['reviewID']?>">
         <label for = "dateInput2">Date Watched: </label>
