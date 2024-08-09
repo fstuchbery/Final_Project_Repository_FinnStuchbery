@@ -36,11 +36,10 @@ $statement->execute();
         </div>
 
         <div id = "listOfReviews">
-            <h1> There are:  <?= $statement->rowCount()  ?> Movie Reviews in total. </h1>
             <ul> 
 
             <?php while($row = $statement->fetch()): ?>
-                <li class = "links"> <h1><a href = "viewPost.php?reviewID=<?= $row['reviewID']?>"><?php echo $row['movieTitle'] ?></a> </h1>
+                <li class = "links"> <h1><a href = "viewPost.php?reviewID=<?= $row['reviewID']?>" class = "linkAnchorTags"><?php echo $row['movieTitle'] ?></a> </h1>
                 <input type = "hidden" name = "indexID" value = "<?= $row['reviewID']?>">
                 <?php echo $row['reviewTitle'] ?> by <?php echo $row['author'] ?> 
             

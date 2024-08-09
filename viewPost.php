@@ -46,13 +46,15 @@ $quote = $statement->fetch();
         <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
         <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
         </div>
-        
-    <h1>  <?=$quote['reviewTitle'] ?> </h1>
-    <h3> Date Watched: <?= $quote['reviewDate'] ?></h3>
-    <h2> By <?=$quote['author'] ?> </h2>
-    <h2> Movie: <?= $quote['movieTitle'] ?></h2>
-    <p> <?= $quote['content'] ?> </p>
+        <div id = "viewPostWrapper">
+        <h1>  <?=$quote['reviewTitle'] ?> </h1>
+        <h3> Date Watched: <?= $quote['reviewDate'] ?></h3>
+        <h2> By <?=$quote['author'] ?> </h2>
+        <h2> Movie: <?= $quote['movieTitle'] ?></h2>
+        <p> <?= $quote['content'] ?> </p>
       
+    </div>>
+    
      
 </body>
 </html>

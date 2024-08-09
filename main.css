@@ -27,11 +27,22 @@
 }
 .links {
     list-style-type: none;
+    padding: 10px 5px;
     border:4px solid #7c7c7c;
     border-radius: 5px;
     margin: 5px 5px;
     width: 50%;
 }
+
+#viewPostWrapper {
+    margin-left: 25%;
+}
+
+a:visited {
+    color:#000;
+}
+
+
 #catsAnchor:visited {
     color:#000;
 }

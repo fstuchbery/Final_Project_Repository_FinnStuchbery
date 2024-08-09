@@ -6,8 +6,6 @@ function handleSubmit(event) {
     event.preventDefault();
     let nameyy = document.getElementById('inputOne').value;
     let num = document.getElementById('inputTwo').value;
-    const apiKey = 'd2572b9b'; // Replace with your actual API key
-    const movieTitle = 'The Shining. '; // Replace with the title of the movie you want to search
     
     let newStr = nameyy.replace(/ /g, '+');
     
