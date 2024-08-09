@@ -35,13 +35,19 @@
 }
 
 #viewPostWrapper {
+    width: 25%;
+    border:4px solid #7c7c7c;
+    border-radius: 5px;
     margin-left: 25%;
 }
 
-a:visited {
+.linkAnchorTags:visited {
     color:#000;
 }
 
+.editTagss:visited{
+color:#594885
+}
 
 #catsAnchor:visited {
     color:#000;
@@ -112,7 +118,7 @@ text-decoration: none;
     padding: 5px 5px;
     border:4px solid #7c7c7c;
     border-radius: 5px;
-    width: 35%;
+    width: 25%;
 }
 
  #newCatForm {

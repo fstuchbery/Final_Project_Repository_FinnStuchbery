@@ -43,7 +43,7 @@ $statement->execute();
                 <input type = "hidden" name = "indexID" value = "<?= $row['reviewID']?>">
                 <?php echo $row['reviewTitle'] ?> by <?php echo $row['author'] ?> 
             
-                 <a href = "edit.php?reviewID=<?= $row['reviewID']?>">edit </a> 
+                 <a href = "edit.php?reviewID=<?= $row['reviewID']?>" class = "editTagss">-edit </a> 
             </li>
             <?php endwhile ?>
 
