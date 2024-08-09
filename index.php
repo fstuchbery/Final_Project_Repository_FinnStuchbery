@@ -27,7 +27,7 @@ $statement->execute();
 <body id = "indexBody">
     <!-- Remember that alternative syntax is good and html inside php is bad -->
      
-    <h1 id = "titleCard"><a href = "index.php" id = "homeLink"> BetterLoxd </a> </h1>
+    <h1 id = "titleCard"><a href = "index.php" id = "homeLink">Home </a> </h1>
         <div id = "linksWrapper">
         <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
         <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
@@ -41,10 +41,10 @@ $statement->execute();
             <ul> 
 
             <?php while($row = $statement->fetch()): ?>
-                <li class = "links"> <h3><a href = "viewPost.php?reviewID=<?= $row['reviewID']?>" class = "linkAnchorTags"><?php echo $row['movieTitle'] ?></a> </h3>
+                <li class = "links">
+                 <h3><a href = "viewPost.php?reviewID=<?= $row['reviewID']?>" class = "linkAnchorTags"><?php echo $row['movieTitle'] ?></a> </h3>
                 <input type = "hidden" name = "indexID" value = "<?= $row['reviewID']?>">
                 <?php echo $row['reviewTitle'] ?> <br> by <?php echo $row['author'] ?> 
-            
                  <a href = "edit.php?reviewID=<?= $row['reviewID']?>" class = "editTagss">-edit </a> 
             </li>
             <?php endwhile ?>

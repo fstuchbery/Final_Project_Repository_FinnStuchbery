@@ -57,7 +57,7 @@ if($_POST && !empty($_POST['dateInput']) && !empty($_POST['reviewTitleInput']) &
 </head>
 <body id = "postBody">
 
-    <h1 id = "newTitleCard"><a href = "index.php" id = "homeLink"> BetterLoxd </a> </h1>
+    <h1 id = "newTitleCard"><a href = "index.php" id = "homeLink">Home </a> </h1>
     <div id = "linksWrapper">
         <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
         <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
