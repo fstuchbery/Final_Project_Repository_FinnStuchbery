@@ -1,5 +1,5 @@
 #indexBody, #editBody {
-    height: 1600px;
+    height: 80%;
     
     background-color: rgb(49, 62, 88);
 }
@@ -155,7 +155,7 @@ label {
     margin-bottom: 5px;
 }
 .currentCatListLinks {
-    
+    color:#000;
 text-decoration: none;
 }
 

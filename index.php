@@ -1,5 +1,5 @@
 <?php
-
+require('connect.php');
 /*******w******** 
     
     Name: Finn Stuchbery
@@ -7,11 +7,47 @@
     Description:
 
 ****************/
+$sortNumber = 0;
+$sortOptions = [
+    'date' => 'reviewDate',
+    'reviewTitle' => 'reviewTitle',
+    'authors' => 'author'
+];
 
-require('connect.php');
-$query = "SELECT * FROM Reviews";
-$statement = $db->prepare($query);
-$statement->execute();
+$pickedSort = isset($_GET['sortThing']) ? $_GET['sortThing'] : 'authors';
+if(!array_key_exists($pickedSort, $sortOptions)) {
+    $pickedSort = 'authors';
+}
+
+if($_GET['sortThing'] === 'reviewDate') {
+
+    $sortNumber = 1;
+    $query = "SELECT * FROM Reviews ORDER BY reviewDate";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    
+
+
+} else if($_GET['sortThing'] === 'reviewTitle') {
+
+    $sortNumber = 2;
+    $query = "SELECT * FROM Reviews ORDER BY reviewTitle";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    
+
+} else if($_GET['sortThing'] === 'author') {
+
+    $sortNumber = 3;
+    $query = "SELECT * FROM Reviews ORDER BY author";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    
+
+}
+$sortColumn = $sortOptions[$pickedSort];
+
+
 
 ?>
 
@@ -33,23 +69,65 @@ $statement->execute();
         <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
         <a href = "post.php" id = "catsAnchor"><h3>Create Review</h3></a> 
         <a href = "categories.php" id = "catsAnchor"><h3> Edit Categories</h3> </a> 
-       
-        
         </div>
 
         <div id = "listOfReviews">
-            <ul> 
 
-            <?php while($row = $statement->fetch()): ?>
+            <form action = "index.php" method = "get">
+                <label for = "sortThing">Sort By: </label>
+                <select name = "sortThing" id = "sortThing">
+                <option value = "reviewDate">Review Date</option>
+                    <option value = "reviewTitle">Review Title</option>
+                    <option value = "author">author</option>
+                </select>
+                <input type="submit" value="Sort">
+            </form>
+
+
+            <?php if($sortNumber === 1): ?>
+
+                <?=  "Sorted By: " .  $_GET['sortThing'] ?>
+            <ul> 
+            <?php while($row1 = $statement->fetch()): ?>
                 <li class = "links">
-                 <h3><a href = "viewPost.php?reviewID=<?= $row['reviewID']?>" class = "linkAnchorTags"><?php echo $row['movieTitle'] ?></a> </h3>
-                <input type = "hidden" name = "indexID" value = "<?= $row['reviewID']?>">
-                <?php echo $row['reviewTitle'] ?> <br> by <?php echo $row['author'] ?> 
-                 <a href = "edit.php?reviewID=<?= $row['reviewID']?>" class = "editTagss">-edit </a> 
+                 <h3><a href = "viewPost.php?reviewID=<?= $row1['reviewID']?>" class = "linkAnchorTags"><?php echo $row1['movieTitle'] ?></a> </h3>
+                <input type = "hidden" name = "indexID" value = "<?= $row1['reviewID']?>">
+                <?php echo $row1['reviewTitle'] ?> <br> by <?php echo $row1['author'] ?> 
+                 <a href = "edit.php?reviewID=<?= $row1['reviewID']?>" class = "editTagss">-edit </a> 
             </li>
             <?php endwhile ?>
-
             </ul>
+
+
+                <?php elseif($sortNumber === 2): ?>
+                    <?=  "Sorted By: " .  $_GET['sortThing'] ?>
+                    <ul> 
+                        <?php while($row2 = $statement->fetch()): ?>
+                            <li class = "links">
+                            <h3><a href = "viewPost.php?reviewID=<?= $row2['reviewID']?>" class = "linkAnchorTags"><?php echo $row2['movieTitle'] ?></a> </h3>
+                            <input type = "hidden" name = "indexID" value = "<?= $row2['reviewID']?>">
+                            <?php echo $row2['reviewTitle'] ?> <br> by <?php echo $row2['author'] ?> 
+                            <a href = "edit.php?reviewID=<?= $row2['reviewID']?>" class = "editTagss">-edit </a> 
+                        </li>
+                        <?php endwhile ?>
+                    </ul>
+                    
+
+
+                    <?php elseif($sortNumber === 3): ?>
+                        <?=  "Sorted By: " .  $_GET['sortThing'] ?>
+                    <ul> 
+                        <?php while($row3 = $statement->fetch()): ?>
+                            <li class = "links">
+                            <h3><a href = "viewPost.php?reviewID=<?= $row3['reviewID']?>" class = "linkAnchorTags"><?php echo $row3['movieTitle'] ?></a> </h3>
+                            <input type = "hidden" name = "indexID" value = "<?= $row3['reviewID']?>">
+                            <?php echo $row3['reviewTitle'] ?> <br> by <?php echo $row3['author'] ?> 
+                            <a href = "edit.php?reviewID=<?= $row3['reviewID']?>" class = "editTagss">-edit </a> 
+                        </li>
+                        <?php endwhile ?>
+                    </ul>
+
+                    <?php endif  ?>
         </div>
 </body>
 </html>
