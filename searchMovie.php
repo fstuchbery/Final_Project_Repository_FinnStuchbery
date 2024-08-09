@@ -2,8 +2,8 @@
 
 /*******w******** 
     
-    Name:
-    Date:
+    Name: Finn Stuchbery
+    Date: August 9th
     Description:
 
 ****************/
@@ -27,23 +27,23 @@ require('connect.php');
      
     <h1 id = "titleCard"><a href = "index.php" id = "homeLink">Home </a> </h1>
     <div id = "linksWrapper">
-    <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
-        <a href = "sortPosts.php?sortThing=reviewDate" id = "catsAnchor"><h3>Sort Reviews</h3></a> 
-        <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
-        <a href = "post.php" id = "catsAnchor"><h3>Create Review</h3></a> 
-        <a href = "categories.php" id = "catsAnchor"><h3> Edit Categories</h3> </a> 
+    <a href = "searchMovie.php" class = "catsAnchor"><h3>Search For a Film </h3></a> 
+        <a href = "sortPosts.php?sortThing=reviewDate"  class = "catsAnchor"><h3>Sort Reviews</h3></a> 
+        <a href = "currentCategories.php" class = "catsAnchor"><h3> View Categories</h3> </a> 
+        <a href = "post.php" class = "catsAnchor"><h3>Create Review</h3></a> 
+        <a href = "categories.php" class = "catsAnchor"><h3> Edit Categories</h3> </a> 
        
  
-        </div id = "popo">
+        </div>
 
         <div id = "movieResultWrapper">
         <div id = "infoWrapper">
             <form method = "post" action = "searchMovie.php"  onsubmit="handleSubmit(event)"> 
             <label for = "inputOne">Movie Name:</label>
-            <input id = "inputOne" type = "text"></input>
+            <input id = "inputOne" type = "text">
             <br>
             <label for = "inputTwo" >Year Released:</label>
-            <input id = "inputTwo" type = "number"></input>
+            <input id = "inputTwo" type = "number">
 
             <button id = "searchButton" type = "submit" class = "touchUp">Search</button>
             </form>

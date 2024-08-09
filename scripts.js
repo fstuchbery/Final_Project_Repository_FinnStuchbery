@@ -19,7 +19,7 @@ function handleSubmit(event) {
     fetch(encodedURL)
       .then(response => response.json())
       .then(data => {
-
+        // All of the movie results will appear below.
         document.getElementById('titleOfMovie').textContent = "Movie Title: " + data.Title;
         document.getElementById('dateOfMovie').textContent = "Released on: " + data.Released;
         document.getElementById('directorOfMovie').textContent = "Director: " + data.Director;
@@ -28,7 +28,6 @@ function handleSubmit(event) {
         document.getElementById('ratesOfMovie').textContent = "IMDB Average Rating: " + data.imdbRating + "/10";
         document.getElementById('lengthOfMovie').textContent = "Runtime: " + data.Runtime;
         document.getElementById('boxOfficeOfMovie').textContent = "Box Office: " + data.BoxOffice;
-        console.log(data); // This will log the search results for "Inception"
       })
       .catch(error => {
         console.error('Error:', error); // Handle any errors

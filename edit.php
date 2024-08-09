@@ -2,8 +2,8 @@
 
 /*******w******** 
     
-    Name:
-    Date:
+    Name: Finn Stuchbery
+    Date: August 9th
     Description:
 
 ****************/
@@ -17,7 +17,7 @@ isset($_POST['movieTitleInput2']) && isset($_POST['authorInput2']) && isset($_PO
     
     
     
-    
+     // SANITIZE ID 
     $id = filter_input(INPUT_POST,'reviewID', FILTER_SANITIZE_NUMBER_INT);
     $titleInput = filter_input(INPUT_POST,'reviewTitleInput2', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $dateInput = $_POST['dateInput2'];
@@ -42,19 +42,19 @@ isset($_POST['movieTitleInput2']) && isset($_POST['authorInput2']) && isset($_PO
         
     }
 } elseif( $submitResponse === 'delete') {
-    $id = filter_input(INPUT_POST,'reviewID', FILTER_SANITIZE_NUMBER_INT);
+    $id = filter_input(INPUT_POST,'reviewID', FILTER_SANITIZE_NUMBER_INT); // SANITIZE ID 
     $stmt = $db->prepare('DELETE FROM Reviews WHERE reviewID = :id');
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
     header('Location: /index.php');
     exit();
 
-} elseif(isset($_GET['reviewID'])) {
+} elseif(isset($_GET['reviewID'])) { // VALIDATE ID 
 
-$id = filter_input(INPUT_GET,'reviewID', FILTER_SANITIZE_NUMBER_INT);
+$id = filter_input(INPUT_GET,'reviewID', FILTER_SANITIZE_NUMBER_INT); // SANIITIZE
 $query = "SELECT * FROM Reviews WHERE reviewID = :id";
 $statement = $db->prepare($query);
-$statement->bindValue(':id',$id,PDO::PARAM_INT);
+$statement->bindValue(':id',$id,PDO::PARAM_INT); //
 $statement->execute();
 $quote = $statement->fetch();
 
@@ -78,11 +78,11 @@ $quote = $statement->fetch();
      <?php if($id): ?>
         <h1 id = "titleCard"><a href = "index.php" id = "homeLink">Home </a> </h1>
         <div id = "linksWrapper">
-        <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
-        <a href = "sortPosts.php?sortThing=reviewDate" id = "catsAnchor"><h3>Sort Reviews</h3></a> 
-        <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
-        <a href = "post.php" id = "catsAnchor"><h3>Create Review</h3></a> 
-        <a href = "categories.php" id = "catsAnchor"><h3> Edit Categories</h3> </a> 
+        <a href = "searchMovie.php" class = "catsAnchor"><h3>Search For a Film </h3></a> 
+        <a href = "sortPosts.php?sortThing=reviewDate"  class = "catsAnchor"><h3>Sort Reviews</h3></a> 
+        <a href = "currentCategories.php" class = "catsAnchor"><h3> View Categories</h3> </a> 
+        <a href = "post.php" class = "catsAnchor"><h3>Create Review</h3></a> 
+        <a href = "categories.php" class = "catsAnchor"><h3> Edit Categories</h3> </a>  
        
         
         </div>

@@ -1,4 +1,11 @@
 <?php 
+/*******w******** 
+    
+    Name: Finn Stuchbery
+    Date: August 9th
+    Description:
+
+****************/
 require('connect.php');
 require('authenticate.php');
 // has authentication to stop normal users
@@ -72,11 +79,11 @@ if($_POST && !empty($_POST['catName']) ) {
      
     <h1 id = "titleCard"><a href = "index.php" id = "homeLink">Home </a> </h1>
         <div id = "linksWrapper">
-        <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
-        <a href = "sortPosts.php?sortThing=reviewDate" id = "catsAnchor"><h3>Sort Reviews</h3></a> 
-        <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
-        <a href = "post.php" id = "catsAnchor"><h3>Create Review</h3></a> 
-        <a href = "categories.php" id = "catsAnchor"><h3> Edit Categories</h3> </a> 
+        <a href = "searchMovie.php" class = "catsAnchor"><h3>Search For a Film </h3></a> 
+        <a href = "sortPosts.php?sortThing=reviewDate"  class = "catsAnchor"><h3>Sort Reviews</h3></a> 
+        <a href = "currentCategories.php" class = "catsAnchor"><h3> View Categories</h3> </a> 
+        <a href = "post.php" class = "catsAnchor"><h3>Create Review</h3></a> 
+        <a href = "categories.php" class = "catsAnchor"><h3> Edit Categories</h3> </a> 
        
         
         </div>
