@@ -1,7 +1,8 @@
 <?php 
-
-
 require('connect.php');
+require('authenticate.php');
+// has authentication to stop normal users
+
 $oldCat = false;
 $querrry = "SELECT * FROM categories";
 $sstmt = $db->prepare($querrry);

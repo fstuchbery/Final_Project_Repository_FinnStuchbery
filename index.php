@@ -2,7 +2,7 @@
 
 /*******w******** 
     
-    Name:
+    Name: Finn Stuchbery
     Date:
     Description:
 
@@ -39,7 +39,7 @@ $statement->execute();
             <ul> 
 
             <?php while($row = $statement->fetch()): ?>
-                <li class = "links"> <h1><a href = "viewPost.php?reviewID=<?= $row['reviewID']?>" class = "linkAnchorTags"><?php echo $row['movieTitle'] ?></a> </h1>
+                <li class = "links"> <h3><a href = "viewPost.php?reviewID=<?= $row['reviewID']?>" class = "linkAnchorTags"><?php echo $row['movieTitle'] ?></a> </h3>
                 <input type = "hidden" name = "indexID" value = "<?= $row['reviewID']?>">
                 <?php echo $row['reviewTitle'] ?> <br> by <?php echo $row['author'] ?> 
             

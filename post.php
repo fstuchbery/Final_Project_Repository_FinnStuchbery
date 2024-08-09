@@ -2,11 +2,13 @@
 
 /*******w******** 
     
-    Name:
+    Name: Finn Stuchbery
     Date:
     Description:
 
 ****************/
+
+// has authentication to stop normal users
 require('authenticate.php');
 require('connect.php');
 

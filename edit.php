@@ -7,6 +7,7 @@
     Description:
 
 ****************/
+// has authentication to stop normal users
 require('authenticate.php');
 require('connect.php');
 $submitResponse = isset($_POST['submitButton']) ? $_POST['submitButton'] : '';
