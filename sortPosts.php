@@ -1,6 +1,7 @@
 <?php
-require('connect.php');
 require('authenticate.php');
+require('connect.php');
+
 /*******w******** 
     
     Name: Finn Stuchbery
