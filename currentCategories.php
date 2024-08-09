@@ -42,7 +42,7 @@ $allReviews = $statemennt->fetchAll(PDO::FETCH_ASSOC);
             
             <ul id = "currentCatList"> 
                     <?php foreach($allCats as $categoriesIndex):   ?> 
-                    <h2>  <?php echo $categoriesIndex['categorieName']  ?>  </h2>   
+                    <h2 id = "currentCatName">  <?php echo $categoriesIndex['categorieName']  ?>  </h2>   
                     <?php foreach($allReviews as $reviewIndex):   ?>
                         <?php if($reviewIndex['categorieID'] === $categoriesIndex['id']) { ?>
                     <li class = "listLinksCats"> 

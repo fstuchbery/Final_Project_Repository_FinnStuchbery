@@ -66,12 +66,17 @@
 .linkAnchorTags:hover{
     color: #7c7c7c;
 }
+.linkAnchorTags {
+    color:#000;
+}
 
 .linkAnchorTags {
+    
     margin-bottom: 2px;
 }
 
 .editTagss {
+    color:#594885;
     text-decoration: none;
     margin-top: 0px;
 }
@@ -146,9 +151,16 @@ label {
     width:25%;
 }
 
-
+.listLinksCats {
+    margin-bottom: 5px;
+}
 .currentCatListLinks {
+    
 text-decoration: none;
+}
+
+#currentCatName {
+    margin-bottom: 3px;
 }
 #postForm, #editForm {
     align-content: end;
