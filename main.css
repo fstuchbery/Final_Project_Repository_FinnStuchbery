@@ -120,6 +120,10 @@ color:#594885
     color:#000;
 }
 
+#searchFormIndex {
+    margin-bottom: 5px;
+}
+
 label {
     color: #c9c3c3;
 }

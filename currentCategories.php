@@ -30,9 +30,10 @@ $allReviews = $statemennt->fetchAll(PDO::FETCH_ASSOC);
 <body id = "indexBody">
     <!-- Remember that alternative syntax is good and html inside php is bad -->
      
-    <h1 id = "titleCard"><a href = "index.php?sortThing=reviewTitle" id = "homeLink">Home </a> </h1>
+    <h1 id = "titleCard"><a href = "index.php" id = "homeLink">Home </a> </h1>
         <div id = "linksWrapper">
         <a href = "searchMovie.php" id = "catsAnchor"><h3>Search For a Film </h3></a> 
+        <a href = "sortPosts.php?sortThing=reviewDate" id = "catsAnchor"><h3>Sort Reviews</h3></a> 
         <a href = "currentCategories.php" id = "catsAnchor"><h3> View Categories</h3> </a> 
         <a href = "post.php" id = "catsAnchor"><h3>Create Review</h3></a> 
         <a href = "categories.php" id = "catsAnchor"><h3> Edit Categories</h3> </a> 
